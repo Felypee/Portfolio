@@ -1,6 +1,10 @@
 import { withSentryConfig } from "@sentry/nextjs";
 /** @type {import('next').NextConfig} */
-export default nextConfig = {};
+const nextConfig = {
+  reactStrictMode: false,
+};
+
+export default nextConfig;
 
 // export default withSentryConfig(
 //   nextConfig,
