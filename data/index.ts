@@ -10,8 +10,8 @@ export const gridItems = [
     id: 1,
     title: "",
     description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full",
+    className: "lg:col-span-3 md:col-span-6 md:row-span-4 min-h-[60vh] ",
+    imgClassName: "w-full h-full object-contain",
     titleClassName: "justify-end",
     img: "/ecloud1.jpeg",
     spareImg: "",
@@ -56,16 +56,6 @@ export const gridItems = [
     titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "/ecloud4.jpeg",
     spareImg: "/grid.svg",
-  },
-  {
-    id: 6,
-    title: "Do you want to start a project together?",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-    img: "",
-    spareImg: "",
   },
 ];
 
