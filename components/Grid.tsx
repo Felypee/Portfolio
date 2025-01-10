@@ -8,9 +8,9 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 const Grid = () => {
     return (
-        <section className="flex flex-col items-start max-h-[100vh] w-full" id="about">
+        <section className="flex flex-col items-start  w-full ">
             <h1 className="heading">
-                Main <span className="text-purple">projects</span>
+                Principales <span className="text-purple">proyectos</span>
             </h1>
             <div
                 style={{
@@ -25,7 +25,14 @@ const Grid = () => {
                         gap: 15,
                     }}
                 >
-                    <img src="/ecloud-logo.webp" alt="Ecloud4 Logo" height={150} width={150} />
+                    <img
+                        src="/ecloud-logo.webp"
+                        alt="Ecloud4 Logo"
+                        style={{
+                            minWidth: '150px',
+                            height: '180px',
+                        }}
+                    />
                     <div
                         style={{
                             gap: 4,
@@ -60,32 +67,38 @@ const Grid = () => {
                     </div>
                 </div>
             </div>
-            <Carousel
-                opts={{
-                    align: 'center',
-                    loop: true,
+            <div
+                style={{
+                    display: 'flex',
+                    whiteSpace: 'nowrap',
+                    width: '100%', // Asegura que ocupe todo el ancho disponible
+                    paddingTop: '1.25rem',
+                    scrollBehavior: 'smooth',
+                    overflowX: 'auto', // Habilita el scroll horizontal
                 }}
-                plugins={[
-                    Autoplay({
-                        delay: 3000,
-                    }),
-                ]}
-                className="overflow-visible  py-5"
             >
-                <CarouselContent className="overflow-visible ">
-                    {gridItems.map((item, i) => (
-                        <CarouselItem key={i} className="pl-1 basis-1/5  ">
-                            <img
-                                src={item.img}
-                                className=" h-auto hover:scale-110 cursor-pointer transition-transform duration-300 ease-in-out"
-                                alt={`Carousel Item ${i + 1}`}
-                            />
-                        </CarouselItem>
-                    ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-            </Carousel>
+                {gridItems.map((item, i) => (
+                    <div
+                        key={i}
+                        style={{
+                            paddingLeft: '0.25rem',
+                            flex: '0 0 auto', // Mantiene el tamaño fijo
+                        }}
+                    >
+                        <img
+                            src={item.img}
+                            alt={`Carousel Item ${i + 1}`}
+                            style={{
+                                height: '450px', // Altura fija
+                                width: '200px', // Ancho fijo
+                                cursor: 'pointer',
+                                transition: 'transform 0.3s ease-in-out',
+                            }}
+                        />
+                    </div>
+                ))}
+            </div>
+
             {/* //// ///// ////// */}
             {/* //// ///// ////// */}
 
@@ -106,7 +119,14 @@ const Grid = () => {
                         gap: 15,
                     }}
                 >
-                    <img src="/gemes.png" alt="Ecloud4 Logo" height={150} width={150} />
+                    <img
+                        src="/gemes.png"
+                        alt="Ecloud4 Logo"
+                        style={{
+                            minWidth: '150px',
+                            height: '150px',
+                        }}
+                    />
                     <div
                         style={{
                             gap: 4,
@@ -128,46 +148,42 @@ const Grid = () => {
                                 fontWeight: '200',
                             }}
                         >
-                            Es una aplicación de domicilios. La aplicación es para los riders. Ellos reciben ordenes en
-                            tiempo real. Cuenta con un backoffice donde se pueden hacer seguimiento a los riders y a los
-                            pedidos.
+                            Es una aplicación de domicilios. Los motorizados reciben ordenes en tiempo real.
                         </p>
-
-                        <a
-                            href="https://apps.apple.com/us/app/ecloud4/id6447580403?platform=iphone"
-                            style={{ textDecoration: 'underline', color: '#37AFE1' }}
-                        >
-                            <p>Ir a la App Store</p>
-                        </a>
                     </div>
                 </div>
             </div>
-            <Carousel
-                opts={{
-                    align: 'center',
-                    loop: true,
+            <div
+                style={{
+                    display: 'flex',
+                    whiteSpace: 'nowrap',
+                    width: '100%', // Asegura que ocupe todo el ancho disponible
+                    paddingTop: '1.25rem',
+                    scrollBehavior: 'smooth',
+                    overflowX: 'auto', // Habilita el scroll horizontal
                 }}
-                plugins={[
-                    Autoplay({
-                        delay: 3000,
-                    }),
-                ]}
-                className="overflow-visible  py-5"
             >
-                <CarouselContent className="overflow-visible ">
-                    {gemesItems.map((item, i) => (
-                        <CarouselItem key={i} className="pl-1 basis-1/5  ">
-                            <img
-                                src={item.img}
-                                className=" h-auto hover:scale-110 cursor-pointer transition-transform duration-300 ease-in-out"
-                                alt={`Carousel Item ${i + 1}`}
-                            />
-                        </CarouselItem>
-                    ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-            </Carousel>
+                {gemesItems.map((item, i) => (
+                    <div
+                        key={i}
+                        style={{
+                            paddingLeft: '0.25rem',
+                            flex: '0 0 auto', // Mantiene el tamaño fijo
+                        }}
+                    >
+                        <img
+                            src={item.img}
+                            alt={`Carousel Item ${i + 1}`}
+                            style={{
+                                height: '450px', // Altura fija
+                                width: '200px', // Ancho fijo
+                                cursor: 'pointer',
+                                transition: 'transform 0.3s ease-in-out',
+                            }}
+                        />
+                    </div>
+                ))}
+            </div>
 
             {/* //// ///// ////// */}
             {/* //// ///// ////// */}
@@ -185,13 +201,26 @@ const Grid = () => {
                     style={{
                         display: 'flex',
                         flexDirection: 'row',
+                        alignItems: 'start',
                         gap: 15,
                     }}
                 >
-                    <img src="/fego.png" alt="Ecloud4 Logo" height={150} width={150} />
+                    <div>
+                        <img
+                            src="/fego.png"
+                            alt="Ecloud4 Logo"
+                            style={{
+                                minWidth: '150px',
+                                height: '180px',
+                            }}
+                        />
+                    </div>
+
                     <div
                         style={{
                             gap: 4,
+                            display: 'flex',
+                            flexDirection: 'column',
                         }}
                     >
                         <h1
@@ -210,45 +239,44 @@ const Grid = () => {
                                 fontWeight: '200',
                             }}
                         >
-                            Es una aplicación para aprender inglés. Se basa en la teoría científica de la repetición
-                            espaciada para poder generar recordación.
+                            Es una aplicación para aprender inglés. Se basa en la teoría de la repetición espaciada para
+                            poder generar recordación.
                         </p>
-
-                        <a
-                            href="https://apps.apple.com/us/app/ecloud4/id6447580403?platform=iphone"
-                            style={{ textDecoration: 'underline', color: '#37AFE1' }}
-                        >
-                            <p>Ir a la App Store</p>
-                        </a>
                     </div>
                 </div>
             </div>
-            <Carousel
-                opts={{
-                    align: 'center',
-                    loop: true,
+
+            <div
+                style={{
+                    display: 'flex',
+                    whiteSpace: 'nowrap',
+                    width: '100%', // Asegura que ocupe todo el ancho disponible
+                    paddingTop: '1.25rem',
+                    scrollBehavior: 'smooth',
+                    overflowX: 'auto', // Habilita el scroll horizontal
                 }}
-                plugins={[
-                    Autoplay({
-                        delay: 3000,
-                    }),
-                ]}
-                className="overflow-visible  py-5"
             >
-                <CarouselContent className="overflow-visible ">
-                    {fegoItems.map((item, i) => (
-                        <CarouselItem key={i} className="pl-1 basis-1/5  ">
-                            <img
-                                src={item.img}
-                                className=" h-auto hover:scale-110 cursor-pointer transition-transform duration-300 ease-in-out"
-                                alt={`Carousel Item ${i + 1}`}
-                            />
-                        </CarouselItem>
-                    ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-            </Carousel>
+                {fegoItems.map((item, i) => (
+                    <div
+                        key={i}
+                        style={{
+                            paddingLeft: '0.25rem',
+                            flex: '0 0 auto', // Mantiene el tamaño fijo
+                        }}
+                    >
+                        <img
+                            src={item.img}
+                            alt={`Carousel Item ${i + 1}`}
+                            style={{
+                                height: '450px', // Altura fija
+                                width: '200px', // Ancho fijo
+                                cursor: 'pointer',
+                                transition: 'transform 0.3s ease-in-out',
+                            }}
+                        />
+                    </div>
+                ))}
+            </div>
         </section>
     );
 };

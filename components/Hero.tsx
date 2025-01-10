@@ -48,6 +48,7 @@ const Hero = () => {
                         color: 'white',
                         fontSize: 50,
                         fontWeight: '800',
+                        textAlign: 'center',
                     }}
                 >
                     Mobile developer
@@ -58,19 +59,10 @@ const Hero = () => {
                         color: 'white',
                         fontSize: 30,
                         fontWeight: '600',
+                        textAlign: 'center',
                     }}
                 >
                     FLUTTER | REACT NATIVE | AWS | NODEJS
-                </p>
-
-                <p
-                    style={{
-                        color: 'white',
-                        fontSize: 20,
-                        fontWeight: '400',
-                    }}
-                >
-                    Felipe Arango
                 </p>
             </div>
         </section>

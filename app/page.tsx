@@ -10,15 +10,16 @@ import Approach from '@/components/Approach';
 import Experience from '@/components/Experience';
 import RecentProjects from '@/components/RecentProjects';
 import { FloatingNav } from '@/components/ui/FloatingNavbar';
+import About from '@/components/About';
 
 const Home = () => {
     return (
-        <main className=" bg-black-100 flex justify-center items-center flex-col  mx-20  ">
+        <main style={{ paddingInline: '5%' }} className=" bg-black-100 flex justify-center items-center flex-col    ">
             <Hero />
             <Grid />
-            {/* <RecentProjects /> */}
-            {/* <Clients /> */}
-            {/* <Footer /> */}
+            <Clients />
+            <About />
+            <Footer />
         </main>
     );
 };
